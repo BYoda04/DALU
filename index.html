@@ -14,14 +14,165 @@
 </head>
 <body>
 
-    <nav>
-        <div class="toggle">
-            
+    <header>
+        <div class="logo">
+            <span>DALU</span>
         </div>
-        <div class="sections">
+        <div class="bag" id="bag">
+                <ion-icon name="bag-outline"></ion-icon>
+                <div class="counter-container">
+                    <span class="counter" id="counter">0</span>
+                </div>
+        </div>
+        <nav id="menu">
+            <div class="toggle" id="toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+            <div class="sections">
+                <ul>
+                    <li style="--i:5;"><a href="#">home</a></li>
+                    <li style="--i:4;"><a href="#new">new</a></li>
+                    <li style="--i:3;"><a href="#women">women</a></li>
+                    <li style="--i:2;"><a href="#men">men</a></li>
+                    <li style="--i:1;"><a href="#kids">kids</a></li>
+                    <!-- <li style="--i:1;"><a href="" style="font-size: 1.5em;"><ion-icon name="search-outline"></ion-icon></a></li> -->
+                </ul>
+            </div>
+        </nav>
+    </header>
 
+    <section class="bag-shopping" id="bag-shopping">
+            <div class="cards-products">
+                <div class="card-product">
+                    <div><img src="img/women-card.png"></div>
+                    <div>
+                        <h2>Women Hoddie</h2>
+                        <div class="stock-container">
+                            <ion-icon name="remove-outline"></ion-icon>
+                            <span>1</span>
+                            <ion-icon name="add-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="remove"><ion-icon name="bag-remove-outline"></ion-icon></div>
+                </div>
+            </div>
+            <div class="remove-button">
+                <div id="close">
+                    <ion-icon name="close-outline"></ion-icon>
+                    <p>close</p>
+                </div>
+                <div>
+                    <ion-icon name="trash-outline"></ion-icon>
+                    <p>remove all</p>
+                </div>
+            </div>
+    </section>
+
+    <main>
+        <section class="banner-container">
+            <div class="directions">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+                <div class="position">
+                    <div class="pointer">
+                        <ion-icon name="radio-button-off-outline"></ion-icon>
+                        <ion-icon name="radio-button-on-outline"></ion-icon>
+                    </div>
+                    <div class="pointer">
+                        <ion-icon name="radio-button-off-outline"></ion-icon>
+                        <ion-icon name="radio-button-on-outline"></ion-icon>
+                    </div>
+                    <div class="pointer">
+                        <ion-icon name="radio-button-off-outline"></ion-icon>
+                        <ion-icon name="radio-button-on-outline"></ion-icon>
+                    </div>
+                </div>
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+            </div>
+            <div class="flayers">
+                <div><img src="img/banner-1.jpg"></div>
+                <div><img src="img/banner-2.jfif"></div>
+                <div><img src="img/banner-3.jpg"></div> 
+            </div>
+        </section>
+
+        <section class="new-container" id="new">
+            <div class="text">
+                <h2>new season</h2>
+                <p>This fall season we bring hoodies made of Peruvian alpaca wool.</p>
+            </div>
+            <div class="new-card">
+                <div class="img-container">
+                    <img src="img/new-card.jpg">
+                </div>
+                <a href="#products">see more</a>
+            </div>
+        </section>
+
+        <section class="products" id="products">
+            <div class="cards" id="women">
+                <div class="img-container">
+                    <img src="img/women-card.png">
+                </div>
+                <div class="description-container">
+                    <div class="text-container">
+                        <h2>women hoodie $25</h2>
+                        <p>stock <span>10</span></p>
+                    </div>
+                    <div class="agree">
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <div class="cards" id="men">
+                <div class="img-container">
+                    <img src="img/men-card.png">
+                </div>
+                <div class="description-container">
+                    <div class="text-container">
+                        <h2>men hoodie $25</h2>
+                        <p>stock <span>10</span></p>
+                    </div>
+                    <div class="agree">
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <div class="cards" id="kids">
+                <div class="img-container">
+                    <img src="img/kid-card.png">
+                </div>
+                <div class="description-container">
+                    <div class="text-container">
+                        <h2>kid hoodie $15</h2>
+                        <p>stock <span>10</span></p>
+                    </div>
+                    <div class="agree">
+                        <ion-icon name="bag-add-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="text-footer">
+            <h2>Our Information</h2>
+            <p>Lima - Perú</p>
+            <h2>About Us</h2>
+            <p>Support Center</p>
+            <p>Customer Support</p>
         </div>
-    </nav>
+        <div class="social-media">
+            <p>Social Media</p>
+            <ion-icon name="logo-facebook"></ion-icon>
+            <ion-icon name="logo-instagram"></ion-icon>
+            <ion-icon name="logo-whatsapp"></ion-icon>
+        </div>
+        <div class="copyright">
+            <p>&#169;DALU. | All rights reserved </p>
+        </div>
+    </footer>
     
 </body>
 
