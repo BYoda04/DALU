@@ -24,6 +24,8 @@ a{
     color: #000;
 }
 
+/*HEADER SECTION*/
+
 header{
     position: fixed;
     top: 0;
@@ -115,6 +117,10 @@ nav{
     transition-delay: calc(0.1s * var(--i));
 }
 
+.sections li:nth-child(6){
+    display: none;
+}
+
 .active li{
     transform: translateY(calc(-60px * var(--i)));
     visibility: visible;
@@ -132,6 +138,7 @@ main{
     height: 0;
     visibility: hidden;
     transition: 1s;
+    z-index: 1000;
 }
 
 .bag-shopping.active{
@@ -145,6 +152,11 @@ main{
 
 .cards-products{
     padding: 35px 0;
+    transition: 1s;
+}
+
+.cards-products.disable{
+    display: none;
 }
 
 .card-product{
@@ -158,6 +170,11 @@ main{
     align-items: center;
     text-align: center;
     border-radius: 1rem;
+    transition: 1s;
+}
+
+.card-product.disable{
+    display: none;
 }
 
 .card-product div img{
@@ -217,29 +234,8 @@ main{
     height: 30vh;
 }
 
-.banner-container .directions, .banner-container .flayers{
+.banner-container .flayers{
     position: absolute;
-}
-
-.directions{
-    width: 100vw; 
-    height: 24vh;  
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 3em;
-    z-index: 1000;
-}
-
-.position{
-    align-self: flex-end;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.pointer{
-    font-size: 0.5em;
 }
 
 .flayers{
@@ -285,16 +281,11 @@ main{
     padding: 25px 0;
 }
 
-.new-card a{
-    background: #fff;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 1.5em;
-    padding: 10px;
-    border: 1px solid #000;
-}
-
 /*PRODUCTS SECTION*/
+.products h2{
+    text-align: center;
+    font-size: 2em;
+}
 
 .cards{
     margin: 45px;
@@ -325,6 +316,8 @@ main{
     font-size: 2.5em;
     cursor: pointer;
 }
+
+/*FOOTER SECTION*/
 
 footer{
     background: #595859;
@@ -357,6 +350,72 @@ footer{
 
 @media (min-width: 767px) {
 
+    /*HEADER SECTION*/
+
+    nav{
+        display: block;
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .toggle{  
+        display: none;
+    }
+
+    .sections{
+        position: relative;
+        width: 100%;
+        height: auto;
+        visibility: visible;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+    
+    .sections ul{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: auto;
+        margin-right: 25px;
+    }
+    
+    .sections ul li{
+        text-transform: uppercase;  
+        text-align: center;
+    }
+    
+    .sections li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 15px;
+        position: relative;
+        font-weight: bold;
+        font-size: 1.25em;
+        transition: 0s;
+        transition-delay: 0s;
+    }
+
+    .sections li:nth-child(3){
+        display: none;
+    }
+
+    .sections li:nth-child(4){
+        display: none;
+    }
+
+    .sections li:nth-child(5){
+        display: none;
+    }
+
+    .sections li:nth-child(6){
+        display: flex;
+    }
+
     /*BAG SECTION*/
 
     .card-product{
@@ -369,11 +428,11 @@ footer{
         height: 30vh;
     }
 
-    .directions{
-        height: 25vh;
-    }
-
     /*NEW SECTION*/
+
+    .new-container{
+        margin-top: 50px;
+    }
 
     .new-card{
         transform: translateX(30%);
@@ -383,6 +442,10 @@ footer{
     /*PRODUCTS SECTION*/
 
     .products{
+        margin-top: 50px;
+    }
+
+    .cards-container{
         display: grid;
         grid-template-columns: repeat(3,1fr);
     }
@@ -408,15 +471,21 @@ footer{
         height: 80vh;
     }
 
-    .directions{
-        height: 70vh;
-    }
-
     /*NEW SECTION*/
+
+    .new-container{
+        margin-top: 100px;
+    }
 
     .new-card{
         transform: translateX(70%);
         width: 40vw;
+    }
+
+    /*PRODUCTS SECTION*/
+
+    .products{
+        margin-top: 100px;
     }
 
 }

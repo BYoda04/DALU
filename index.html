@@ -18,12 +18,6 @@
         <div class="logo">
             <span>DALU</span>
         </div>
-        <div class="bag" id="bag">
-                <ion-icon name="bag-outline"></ion-icon>
-                <div class="counter-container">
-                    <span class="counter" id="counter">0</span>
-                </div>
-        </div>
         <nav id="menu">
             <div class="toggle" id="toggle">
                 <ion-icon name="menu-outline"></ion-icon>
@@ -35,15 +29,22 @@
                     <li style="--i:3;"><a href="#women">women</a></li>
                     <li style="--i:2;"><a href="#men">men</a></li>
                     <li style="--i:1;"><a href="#kids">kids</a></li>
-                    <!-- <li style="--i:1;"><a href="" style="font-size: 1.5em;"><ion-icon name="search-outline"></ion-icon></a></li> -->
+                    <li><a href="#products">store</a></li>
                 </ul>
             </div>
         </nav>
+        <div class="bag" id="bag">
+                <ion-icon name="bag-outline"></ion-icon>
+                <div class="counter-container">
+                    <span class="counter" id="counter">0</span>
+                </div>
+        </div>
+        
     </header>
 
     <section class="bag-shopping" id="bag-shopping">
-            <div class="cards-products">
-                <div class="card-product">
+            <div class="cards-products" id="cards-products">
+                <div class="card-product" id="card-product">
                     <div><img src="img/women-card.png"></div>
                     <div>
                         <h2>Women Hoddie</h2>
@@ -53,7 +54,7 @@
                             <ion-icon name="add-outline"></ion-icon>
                         </div>
                     </div>
-                    <div class="remove"><ion-icon name="bag-remove-outline"></ion-icon></div>
+                    <div class="remove" id="remove"><ion-icon name="bag-remove-outline"></ion-icon></div>
                 </div>
             </div>
             <div class="remove-button">
@@ -61,37 +62,17 @@
                     <ion-icon name="close-outline"></ion-icon>
                     <p>close</p>
                 </div>
-                <div>
-                    <ion-icon name="trash-outline"></ion-icon>
-                    <p>remove all</p>
+                <div id="show-all">
+                    <ion-icon name="bag-check-outline"></ion-icon>
+                    <p>show all</p>
                 </div>
             </div>
     </section>
 
     <main>
         <section class="banner-container">
-            <div class="directions">
-                <ion-icon name="chevron-back-outline"></ion-icon>
-                <div class="position">
-                    <div class="pointer">
-                        <ion-icon name="radio-button-off-outline"></ion-icon>
-                        <ion-icon name="radio-button-on-outline"></ion-icon>
-                    </div>
-                    <div class="pointer">
-                        <ion-icon name="radio-button-off-outline"></ion-icon>
-                        <ion-icon name="radio-button-on-outline"></ion-icon>
-                    </div>
-                    <div class="pointer">
-                        <ion-icon name="radio-button-off-outline"></ion-icon>
-                        <ion-icon name="radio-button-on-outline"></ion-icon>
-                    </div>
-                </div>
-                <ion-icon name="chevron-forward-outline"></ion-icon>
-            </div>
             <div class="flayers">
-                <div><img src="img/banner-1.jpg"></div>
                 <div><img src="img/banner-2.jfif"></div>
-                <div><img src="img/banner-3.jpg"></div> 
             </div>
         </section>
 
@@ -104,50 +85,52 @@
                 <div class="img-container">
                     <img src="img/new-card.jpg">
                 </div>
-                <a href="#products">see more</a>
             </div>
         </section>
 
         <section class="products" id="products">
-            <div class="cards" id="women">
-                <div class="img-container">
-                    <img src="img/women-card.png">
-                </div>
-                <div class="description-container">
-                    <div class="text-container">
-                        <h2>women hoodie $25</h2>
-                        <p>stock <span>10</span></p>
+            <h2>STORE</h2>
+            <div class="cards-container">
+                <div class="cards" id="women">
+                    <div class="img-container">
+                        <img src="img/women-card.png">
                     </div>
-                    <div class="agree">
-                        <ion-icon name="bag-add-outline"></ion-icon>
-                    </div>
-                </div>
-            </div>
-            <div class="cards" id="men">
-                <div class="img-container">
-                    <img src="img/men-card.png">
-                </div>
-                <div class="description-container">
-                    <div class="text-container">
-                        <h2>men hoodie $25</h2>
-                        <p>stock <span>10</span></p>
-                    </div>
-                    <div class="agree">
-                        <ion-icon name="bag-add-outline"></ion-icon>
+                    <div class="description-container">
+                        <div class="text-container">
+                            <h2>women hoodie $25</h2>
+                            <p>stock <span>10</span></p>
+                        </div>
+                        <div class="agree">
+                            <ion-icon name="bag-add-outline"></ion-icon>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="cards" id="kids">
-                <div class="img-container">
-                    <img src="img/kid-card.png">
-                </div>
-                <div class="description-container">
-                    <div class="text-container">
-                        <h2>kid hoodie $15</h2>
-                        <p>stock <span>10</span></p>
+                <div class="cards" id="men">
+                    <div class="img-container">
+                        <img src="img/men-card.png">
                     </div>
-                    <div class="agree">
-                        <ion-icon name="bag-add-outline"></ion-icon>
+                    <div class="description-container">
+                        <div class="text-container">
+                            <h2>men hoodie $25</h2>
+                            <p>stock <span>10</span></p>
+                        </div>
+                        <div class="agree">
+                            <ion-icon name="bag-add-outline"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards" id="kids">
+                    <div class="img-container">
+                        <img src="img/kid-card.png">
+                    </div>
+                    <div class="description-container">
+                        <div class="text-container">
+                            <h2>kid hoodie $15</h2>
+                            <p>stock <span>10</span></p>
+                        </div>
+                        <div class="agree">
+                            <ion-icon name="bag-add-outline"></ion-icon>
+                        </div>
                     </div>
                 </div>
             </div>
